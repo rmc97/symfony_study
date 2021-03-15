@@ -1,0 +1,20 @@
+version: "3"
+
+services: 
+  app: 
+    build: .
+    command: php bin/console server:run 0.0.0.0
+    ports: 
+      - "8000:8000"
+    volumes: 
+      - .:/var/www/html/symfony_study
+    links: 
+      - db
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: senha-symfony-study
+
+
