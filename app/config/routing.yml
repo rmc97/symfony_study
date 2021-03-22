@@ -1,3 +1,7 @@
+study:
+    resource: "@StudyBundle/Controller"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
